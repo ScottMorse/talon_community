@@ -166,12 +166,13 @@ formatters_dict = {
         first_vs_rest(lambda w: title_case()(0, w, True)),
     ),
     "CAPITALIZE_ALL_WORDS": (SEP, title_case()),
+    "PIPE_SEPARATED": words_with_joiner(" | "),
 }
 
 # Mapping from spoken phrases to formatter names
 code_formatter_names = {
-    "all cap": "ALL_CAPS",
-    "all down": "ALL_LOWERCASE",
+    "upper": "ALL_CAPS",
+    "lower": "ALL_LOWERCASE",
     "camel": "PRIVATE_CAMEL_CASE",
     "dotted": "DOT_SEPARATED",
     "dub string": "DOUBLE_QUOTED_STRING",
@@ -184,6 +185,7 @@ code_formatter_names = {
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
     "string": "SINGLE_QUOTED_STRING",
+    "pipes": "PIPE_SEPARATED",
 }
 prose_formatter_names = {
     "say": "NOOP",

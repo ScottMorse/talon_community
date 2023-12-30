@@ -192,7 +192,7 @@ symbol_key_words = {
     "dash": "-",
     "equals": "=",
     "plus": "+",
-    "grave": "`",
+    # ! "grave": "`",
     "tilde": "~",
     "bang": "!",
     "down score": "_",
@@ -228,7 +228,7 @@ symbol_key_words = {
 
 # make punctuation words also included in {user.symbol_keys}
 symbol_key_words.update(punctuation_words)
-ctx.lists["self.punctuation"] = punctuation_words
+ctx.lists["seli.punctuation"] = punctuation_words
 ctx.lists["self.symbol_key"] = symbol_key_words
 ctx.lists["self.number_key"] = {name: str(i) for i, name in enumerate(digits)}
 ctx.lists["self.arrow_key"] = {
