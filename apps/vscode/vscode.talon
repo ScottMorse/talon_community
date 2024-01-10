@@ -288,3 +288,6 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+# SCOTT'S SHORTCUTS AT THE BOTTOM OF THE FILE
+copilot chat | chat: user.vscode("workbench.panel.chat.view.copilot.focus")
