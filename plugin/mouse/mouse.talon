@@ -1,9 +1,9 @@
-control mouse: tracking.control_toggle()
+[control] mouse [control]: tracking.control_toggle()
 control off: user.mouse_sleep()
 zoom mouse: tracking.control_zoom_toggle()
 camera overlay: tracking.control_debug_toggle()
-run calibration: tracking.calibrate()
-touch:
+[run] (calibration | calibrate): tracking.calibrate()
+(touch | click):
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(0)
@@ -13,14 +13,14 @@ touch:
     # Touch automatically ends left drags so this is for right drags specifically
     user.mouse_drag_end()
 
-righty:
+(righty | right click):
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
 
-mid click:
+(mid | wheel) click:
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(2)
