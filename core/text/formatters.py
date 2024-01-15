@@ -165,6 +165,10 @@ formatters_dict = {
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
     "SLASH_SEPARATED": (NOSEP, every_word(lambda w: "/" + w)),
+    "SLASH_INNER_SEPARATED": (
+        NOSEP,
+        lambda i, word, _: ("" if i == 0 else "/") + word,
+    ),
     "CAPITALIZE_FIRST_WORD": (
         SEP,
         first_vs_rest(lambda w: title_case()(0, w, True)),
@@ -172,6 +176,7 @@ formatters_dict = {
     "CAPITALIZE_ALL_WORDS": (SEP, title_case()),
     "PIPE_SEPARATED": words_with_joiner(" | "),
 }
+
 
 # Mapping from spoken phrases to formatter names
 code_formatter_names = {
@@ -186,6 +191,8 @@ code_formatter_names = {
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
     "slasher": "SLASH_SEPARATED",
+    "absolute": "SLASH_SEPARATED",
+    "relative": "SLASH_INNER_SEPARATED",
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
     "scream snake": "SCREAMING_SNAKE_CASE",
