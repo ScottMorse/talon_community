@@ -250,6 +250,8 @@ symbol_key_words = {
     "rangle": ">",
     "R angle": ">",
     "R caret": ">",
+    "right tag": ">",
+    "tag right": ">",
     "right angle": ">",
     "right caret": ">",
     "close caret": ">",
