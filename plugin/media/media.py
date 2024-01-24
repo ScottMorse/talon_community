@@ -2,7 +2,6 @@ from talon import Module, actions, app
 
 mod = Module()
 
-
 @mod.action_class
 class Actions:
     def play_pause():
