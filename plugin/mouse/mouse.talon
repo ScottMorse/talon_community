@@ -13,14 +13,14 @@ camera overlay: tracking.control_debug_toggle()
     # Touch automatically ends left drags so this is for right drags specifically
     user.mouse_drag_end()
 
-(righty | right click):
+rick:
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
 
-(mid | wheel) click:
+mick:
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(2)
