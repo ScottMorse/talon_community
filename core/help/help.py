@@ -566,7 +566,6 @@ def gui_list_help(gui: imgui.GUI):
 
     pages_list = draw_list_commands(gui)
     total_page_count = len(pages_list)
-    # print(pages_list[current_page])
 
     gui.text(f"{selected_list} {current_list_page}/{total_page_count}")
 
