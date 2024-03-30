@@ -23,4 +23,4 @@ mode: dictation
     speech.disable()
     user.engine_sleep()
 
-^talon sleep [<phrase>]$: speech.disable()
+^{user.talon_alias} sleep [<phrase>]$: speech.disable()
