@@ -27,35 +27,35 @@ talon insert version:
 talon dump context:
     result = user.talon_get_active_context()
     print(result)
-^talon test last$:
+^{user.talon_alias} test last$:
     phrase = user.history_get(1)
     user.talon_sim_phrase(phrase)
-^talon test numb <number_small>$:
+^{user.talon_alias} test numb <number_small>$:
     phrase = user.history_get(number_small)
     user.talon_sim_phrase(phrase)
-^talon test <phrase>$: user.talon_sim_phrase(phrase)
-^talon debug action {user.talon_actions}$:
+^{user.talon_alias} test <phrase>$: user.talon_sim_phrase(phrase)
+^{user.talon_alias} debug action {user.talon_actions}$:
     user.talon_action_find("{user.talon_actions}")
-^talon debug list {user.talon_lists}$: user.talon_debug_list(talon_lists)
-^talon copy list {user.talon_lists}$: user.talon_copy_list(talon_lists)
-^talon debug tags$: user.talon_debug_tags()
-^talon debug modes$: user.talon_debug_modes()
-^talon debug scope {user.talon_scopes}$: user.talon_debug_scope(talon_scopes)
-^talon debug setting {user.talon_settings}$: user.talon_debug_setting(talon_settings)
-^talon debug all settings$: user.talon_debug_all_settings()
-^talon debug active app$:
+^{user.talon_alias} debug list {user.talon_lists}$: user.talon_debug_list(talon_lists)
+^{user.talon_alias} copy list {user.talon_lists}$: user.talon_copy_list(talon_lists)
+^{user.talon_alias} debug tags$: user.talon_debug_tags()
+^{user.talon_alias} debug modes$: user.talon_debug_modes()
+^{user.talon_alias} debug scope {user.talon_scopes}$: user.talon_debug_scope(talon_scopes)
+^{user.talon_alias} debug setting {user.talon_settings}$: user.talon_debug_setting(talon_settings)
+^{user.talon_alias} debug all settings$: user.talon_debug_all_settings()
+^{user.talon_alias} debug active app$:
     result = user.talon_get_active_application_info()
     print("**** Dumping active application **** ")
     print(result)
     print("***********************")
-^talon copy active app$:
+^{user.talon_alias} copy active app$:
     result = user.talon_get_active_application_info()
     clip.set_text(result)
 
-^talon create app context$: user.talon_create_app_context()
-^talon create windows app context$: user.talon_create_app_context("win")
-^talon create linux app context$: user.talon_create_app_context("linux")
-^talon create mac app context$: user.talon_create_app_context("mac")
+^{user.talon_alias} create app context$: user.talon_create_app_context()
+^{user.talon_alias} create windows app context$: user.talon_create_app_context("win")
+^{user.talon_alias} create linux app context$: user.talon_create_app_context("linux")
+^{user.talon_alias} create mac app context$: user.talon_create_app_context("mac")
 
 talon (bug report | report bug):
     user.open_url("https://github.com/talonhub/community/issues")
